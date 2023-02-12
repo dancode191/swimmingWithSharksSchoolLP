@@ -7,7 +7,6 @@ body{
     height: 100%;
     background:  #151E3F;
 }
-/* since i add this grid container i have problem with small screen size like pixle4 */
 .grid-container{
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -19,14 +18,12 @@ body{
         "section"
         "section"
         "footer";
-    /* max-height: 100vh; */
     width: 100%;
     height: 100vh;
     background: linear-gradient(to top, #151E3F, #23B5D3);
-    
-    
-    /* overflow-y: scroll; */
+    overflow: hidden;
 }
+
 /* header */
 .header{
     width: 100%;
@@ -286,10 +283,6 @@ body{
 }
 
 @media (max-width: 520px) {
-    .grid-container {
-            /* justify-content: center; */
-            /* align-items: center; */
-    }
     .title {
         font-size: 2.5rem;
         margin-top: 7px;
@@ -319,7 +312,6 @@ body{
         width: 250px;
         height: 300px;
         padding: 15px;
-        
     }
     .tab h3 {
         font-size: 1.2rem;
@@ -364,6 +356,93 @@ body{
     #nextBtn {
         padding: 3px 6px;
         font-size: 12px;
+    }
+    .footer {
+        height: 50%;
+    }
+    .contectUs img {
+        width: 25px;
+        height: 25px;
+    }
+}
+@media (max-height: 400px) {
+    .headerLayer {
+        height: 100px;
+    }
+    /*  */
+    .companyLogoContainer {
+        position: relative;
+        width: 300px;
+        height: 50px;
+        margin-top: 0.2rem;
+    }
+
+    .companylogo {
+        width: 300px;
+        height: 80px;
+    }
+    .companylogo img:nth-child(1) {
+        width: 130px;
+        height: 90px;
+    }
+    .companylogo img:nth-child(2) {
+        width: 130px;
+        height: 70px;
+    }
+    .companylogoLayer {
+        width: 300px;
+        height: 80px;
+    }
+    /*  */
+    .title {
+            margin-top: -30px;
+            font-size: 2.5rem;
+    }
+    .section{
+        overflow-y: scroll;
+    }
+    .text {
+        width: 50%;
+    }
+    .title2 {
+        font-size: 1.8rem;
+    }
+
+    .subtitle {
+        font-size: 0.9rem;
+    }
+    #regForm {
+        margin: 5px 0px;
+        width: 200px;
+        height: 210px;
+        padding: 3px;
+    }
+    .container{
+        height: 100%;
+    }
+    .tab h3 {
+        font-size: 0.8rem;
+    }
+    .tab label {
+        font-size: 0.7rem;
+    }
+    .tab input{
+        width: 10rem;
+        height: 1.1rem;
+        margin-bottom: 0px;
+    }
+    .tab select{
+        width: 10rem;
+        height: 1.2rem;
+    }
+    .thankForSubmit h2{
+        font-size: 1.2rem;
+    }
+    #prevBtn,
+    #nextBtn {
+        padding: 1px 6px;
+        font-size: 0.7rem;
+        margin-bottom: 1rem;
     }
     .footer {
         height: 50%;
