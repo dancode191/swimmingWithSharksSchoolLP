@@ -124,7 +124,7 @@
               <button type="button" id="prevBtn" onclick="nextPrev(-1)">
                 Previous
               </button>
-              <button type="button" id="nextBtn" onclick="nextPrev(1)">
+              <button type="submit" id="nextBtn" onclick="nextPrev(1)">
                 Next
               </button>
             </div>
@@ -178,8 +178,8 @@
         currentTab = currentTab + n;
 
         if (currentTab >= x.length - 1) {
-          console.log("calling sendForm");
-          sendForm();
+          // console.log("calling sendForm");
+          // sendForm();
           showTab(currentTab);
           return false;
         }
