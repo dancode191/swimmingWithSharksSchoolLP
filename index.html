@@ -162,9 +162,12 @@
         }
         if (n == x.length - 2) {
           document.getElementById("nextBtn").innerHTML = "Submit";
-          document.getElementById("nextBtn").setAttribute('type', 'submit')
+          // 
         } else {
           document.getElementById("nextBtn").innerHTML = "Next";
+        }
+        if(n == x.length - 3){
+          document.getElementById("nextBtn").setAttribute('type', 'submit')
         }
         if (n == x.length - 1) {
           document.getElementById("nextBtn").style.display = "none";
