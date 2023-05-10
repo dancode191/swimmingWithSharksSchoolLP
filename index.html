@@ -13,7 +13,7 @@
       rel="stylesheet"/>
       <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;1,700&display=swap" rel="stylesheet">
       
-    <title>LandingPage02</title>
+    <title>SwimmingwithSharksSchool</title>
   </head>
 
   <body>
@@ -39,7 +39,8 @@
           </h2>
         </div>
 
-        <form id="regForm" onsubmit="check()">
+        <!-- id="regForm"  onsubmit="check()" -->
+        <form  action="https://formspree.io/f/mlekopjo" method="POST">
           <div class="container">
             <div class="tab">
               <label for="firstName">First Name:</label><br />
@@ -140,11 +141,11 @@
       </footer>
     </div>
 
-    <!-- emailjs -->
-    <script
+    
+    <!-- <script
       type="text/javascript"
       src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.0/dist/email.min.js"
-    ></script>
+    ></script> -->
 
     <script type="text/javascript">
       var currentTab = 0;
@@ -185,46 +186,47 @@
         showTab(currentTab);
       }
 
-      function sendForm() {
-        console.log("test2-inside sendForm");
-        var formEl = document.forms.regForm;
-        var formData = new FormData(formEl);
+      // emailjs 
+      // function sendForm() {
 
-        let emailContent = {
-          To: formData.get("email"),
-          from_name: "swimming school",
-          to_name: formData.get("firstName"),
-          message:
-            "new lid: " +
-            "<br/>first name: " +
-            formData.get("firstName") +
-            "<br/>last name: " +
-            formData.get("lastName") +
-            "<br/>age: " +
-            formData.get("age") +
-            "<br/>email: " +
-            formData.get("email") +
-            "<br/>experince: " +
-            formData.get("experince") +
-            "<br/>attending: " +
-            formData.get("attending") +
-            "<br/>gear: " +
-            formData.get("gear"),
-        };
+      //   var formEl = document.forms.regForm;
+      //   var formData = new FormData(formEl);
 
-        (function () {
-          emailjs.init("Cx5EVKOed-sFPValW");
-        })();
+      //   let emailContent = {
+      //     To: formData.get("email"),
+      //     from_name: "swimming school",
+      //     to_name: formData.get("firstName"),
+      //     message:
+      //       "new lid: " +
+      //       "<br/>first name: " +
+      //       formData.get("firstName") +
+      //       "<br/>last name: " +
+      //       formData.get("lastName") +
+      //       "<br/>age: " +
+      //       formData.get("age") +
+      //       "<br/>email: " +
+      //       formData.get("email") +
+      //       "<br/>experince: " +
+      //       formData.get("experince") +
+      //       "<br/>attending: " +
+      //       formData.get("attending") +
+      //       "<br/>gear: " +
+      //       formData.get("gear"),
+      //   };
 
-        emailjs
-          .send("service_xplsspm", "template_3vadowi", emailContent)
-          .then(function (response) {
-            console.log("sent mail successfuly");
-          })
-          .catch(function (err) {
-            console.log("print error: " + err);
-          });
-      }
+      //   (function () {
+      //     emailjs.init("Cx5EVKOed-sFPValW");
+      //   })();
+
+      //   emailjs
+      //     .send("service_xplsspm", "template_3vadowi", emailContent)
+      //     .then(function (response) {
+      //       console.log("sent mail successfuly");
+      //     })
+      //     .catch(function (err) {
+      //       console.log("print error: " + err);
+      //     });
+      // }
     </script>
   </body>
 </html>
