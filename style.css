@@ -161,6 +161,7 @@ body{
     border-radius: 10px;
     border: 0.1rem solid #151E3F;
     margin-bottom: 5px;   
+    margin-left: 5px;
 }
 .tab label {
     margin-left: 5px;
